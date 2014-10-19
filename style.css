@@ -1,0 +1,25 @@
+/**
+ * Theme Name:   Lesser
+ * Theme URI:    https://github.com/recruitro/lesser
+ * Description:  Custom theme for Recruitro Blog based on Less
+ * Author:       Neeraj Kumar
+ * Author URI:   http://neerajkumar.name
+ * Version:      0.0.1
+ */
+
+body {
+	background-color: #f1f2f2;
+}
+.container {
+	max-width: 800px;
+}
+article {
+	background-color: #ffffff;
+	padding: 2em;
+}
+article .title {
+	text-align: center;
+}
+article .post-meta {
+	text-align: center;
+}
