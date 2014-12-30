@@ -17,7 +17,7 @@
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo get_the_title(); ?></a>
 					</h2>
 					<p class="meta text-muted">
-						Posted by <?php the_author_posts_link(); ?> on <?php echo get_the_date(); ?>
+						<small>Posted by <?php the_author_posts_link(); ?> on <?php echo get_the_date(); ?></small>
 					</p>
 					<div class="excerpt">
 						<?php echo get_the_excerpt(); ?>

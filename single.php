@@ -18,12 +18,14 @@
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo get_the_title(); ?></a>
 					</h2>
 					<p class="meta text-muted">
-						Posted by <?php the_author_posts_link(); ?> on <?php echo get_the_date(); ?>
+						<small>Posted by <?php the_author_posts_link(); ?> on <?php echo get_the_date(); ?></small>
 					</p>
 					<div class="content">
 						<?php echo get_the_content(); ?>
 					</div>
-					<p class="comments"><?php comments_number( 'no responses', 'one response', '% responses' ); ?>.</p>
+				</div>
+				<div class="comments">
+					<?php comments_template(); ?> 
 				</div>
 			</div>
 		</div>
