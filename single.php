@@ -6,6 +6,7 @@
 			while (have_posts()) : the_post(); ?>
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
+				
 				<div class="post <?php post_class(); ?>">
 					<?php if ( has_post_thumbnail() ) { ?>
 					<div class="thumbnail">
@@ -19,10 +20,10 @@
 					<p class="meta text-muted">
 						Posted by <?php the_author_posts_link(); ?> on <?php echo get_the_date(); ?>
 					</p>
-					<div class="excerpt">
-						<?php echo get_the_excerpt(); ?>
+					<div class="content">
+						<?php echo get_the_content(); ?>
 					</div>
-					<p class="comments"><small><?php comments_number( 'no responses', 'one response', '% responses' ); ?></small></p>
+					<p class="comments"><?php comments_number( 'no responses', 'one response', '% responses' ); ?>.</p>
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,4 @@
 lesser
 ======
 
-Lesser is a custom Wordpress theme based on Less for our blog.
+Lesser is a custom Wordpress theme for our blog.
