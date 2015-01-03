@@ -20,7 +20,7 @@
 						<small>Posted by <?php the_author_posts_link(); ?> on <?php echo get_the_date(); ?></small>
 					</p>
 					<div class="excerpt">
-						<?php echo get_the_excerpt(); ?>
+						<?php the_excerpt(); ?>
 					</div>
 					<p class="comments"><small><?php comments_number( 'no responses', 'one response', '% responses' ); ?></small></p>
 				</div>
