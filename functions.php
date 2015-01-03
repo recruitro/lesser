@@ -22,4 +22,12 @@ function register_menus() {
 	register_nav_menu('primary-menu-right',__( 'Primary Menu Right' ));
 	register_nav_menu('footer-menu',__( 'Footer Menu' ));
 }
+
 add_action( 'init', 'register_menus' );
+
+function get_gravatar_url( $email ) {
+    $hash = md5( strtolower( trim ( $email ) ) );
+    return 'http://gravatar.com/avatar/' . $hash;
+}
+
+add_theme_support( 'post-thumbnails' ); 
