@@ -31,3 +31,16 @@ function get_gravatar_url( $email ) {
 }
 
 add_theme_support( 'post-thumbnails' ); 
+
+function lesser_contactmethods( $contactmethods ) {
+	$contactmethods['twitter_url'] = 'Twitter';
+	$contactmethods['facebook_url'] = 'Facebook';
+	$contactmethods['linkedin_url'] = 'LinkedIn';
+	$contactmethods['googleplus_url'] = 'Google+';
+	$contactmethods['instagram_url'] = 'Instagram';
+	$contactmethods['lastfm_url'] = 'Last.FM';
+	$contactmethods['soundcloud_url'] = 'Soundcloud';
+	return $contactmethods;
+}
+
+add_filter('user_contactmethods','lesser_contactmethods', 10, 1);
