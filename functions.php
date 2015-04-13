@@ -44,3 +44,19 @@ function lesser_contactmethods( $contactmethods ) {
 }
 
 add_filter('user_contactmethods','lesser_contactmethods', 10, 1);
+
+function single_post_bottom_sidebar() {
+
+	$args = array(
+		'name'          => 'Single Post Bottom sidebar',
+		'id'            => 'single_post_bottom_sidebar',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	);
+	register_sidebar( $args );
+
+}
+
+add_action( 'widgets_init', 'single_post_bottom_sidebar' );

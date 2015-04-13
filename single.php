@@ -24,22 +24,32 @@
 						<?php the_content(); ?>
 					</div>
 				</div>
-				<div class="comments">
-					<?php comments_template(); ?> 
-				</div>
 			</div>
 		</div>
 		<?php
 			endwhile;
 		endif;
 		?>
+
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
 				<div class="page_nav_links">
-					<p><small><?php posts_nav_link(); ?></small></p>
+					<?php if ( is_active_sidebar( 'single_post_bottom_sidebar' ) ) : ?>
+						<div id="single-post-bottom-sidebar" class="single_post_bottom_sidebar widget-area" role="complementary">
+							<?php dynamic_sidebar( 'single_post_bottom_sidebar' ); ?>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="comments">
+					<?php comments_template(); ?> 
+				</div>
+			</div>
+		</div>
+		
 	</div>
 </div>
 <?php get_footer(); ?>
